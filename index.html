@@ -23,34 +23,154 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div class="menu-container">
-        <div class="menu">
-            <div class="name">Ronald Kemper</div>
-            <div class="jobTitle">Developer</div>
+    <div class="cover">
+        <div class="menu-container">
+            <div class="menu">
+                <tr >
+                    <td>Ronald Kemper</td>
+                    <td>Developer</td>
+                </tr>
+                <tr>
+                    <td>Ronspoolco@gmail.com</td>
+                    <td>513-953-0366</td>
+                </tr>
+
+
+            </div>
         </div>
-    </div>
-    <div class="container">
-        <div class="photos">
-            <img src="img/selfIcon.jpg">
-            <div class="img1"><a href="https://github.com/RonnieKemper"><img src="img/githubIcon.png"></div>
-            <div class="img2"><a href="https://www.linkedin.com/in/ronald-kemper-9882b0220/"><img src="img/linkedinIcon.png"></a></div>
+        <div class="container">
+            <div class="photos">
+                <img src="img/selfIcon.jpg" class="responsive">
+                <div class="img1"><a href="https://github.com/RonnieKemper"><img src="img/githubIcon.png"></div>
+                <div class="img2"><a href="https://www.linkedin.com/in/ronald-kemper-9882b0220/"><img src="img/linkedinIcon.png"></a></div>
+            </div>
         </div>
+        
     </div>
-    <h3>Tech-related-skills:</h3>
-    <ul>
-        <li>yay I can read!</li>
-    </ul>
-	<ul id="repositories" class="list-group"></ul>
-          <button onclick="loadRepo()" class="btn btn-info">
+    <div class="cover2">
+    <div class="container-fluid">
+        <div class="skills">
+          <div class="border">
+        <table class="skills">
+          <thead>
+           <tr>
+            <td></td>
+            <td>Skill</td>
+            <td></td>     
+           </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td>Travis CI</td>
+                <td>Scrum</td>
+                <td>Agile Methodologies</td>
+            </tr>
+            <tr>
+                <td>Project Management</td>
+                <td>Software Development</td>
+                <td>Object-Oriented Programming (OOP)</td>
+            </tr>
+            <tr>
+                <td>Software Design</td>
+                <td>Data Structures</td>
+                <td>Algorithms</td>
+            </tr>
+            <tr>
+                <td>Analytical Skills</td>
+                <td>Data Analysis</td>
+                <td>Python (Programming Language)</td>
+            </tr>
+            <tr>
+                <td>JavaScript</td>
+                <td>Cascading Style Sheets (CSS)</td>
+                <td>HTML5</td>
+            </tr>
+            <tr>
+                <td>PHP</td>
+                <td>MySQL</td>
+                <td>SQLite</td>
+            </tr>
+            <tr>
+                <td>Selenium</td>
+                <td>Kivy</td>
+                <td>Dynamic Programming</td>
+            </tr>
+            <tr>
+                <td>Angular</td>
+                <td>Node.js</td>
+                <td>Angular Command Line Interface (CLI)</td>
+            </tr>
+            <tr>
+                <td>Problem Solving</td>
+                <td>Organization Skills</td>
+                <td>Teamwork</td>
+            </tr>
+            <tr>
+                <td>Critical Thinking</td>
+                <td>Communication</td>
+                <td>Easily Adaptable</td>
+            </tr>
+            <tr>
+                <td>Natural Language Processing (NLP)</td>
+                <td>Public Key Cryptography</td>
+                <td>JSON</td>
+            </tr>
+            <tr>
+                <td>Express</td>
+                <td>React.js</td>
+                <td>System Deployment</td>
+            </tr>
+            <tr>
+                <td>Interpersonal Skills</td>
+                <td>Decision-Making</td>
+            </tr>
+            <tr>
+                <td>Responsive Web Design</td>
+                <td>Ionic Framework</td>
+                <td>Apache Cordova</td>
+            </tr>
+            <tr>
+                <td>Mobile Application Development</td>
+                <td>Bootstrap</td>
+                <td>Flexbox</td>
+            </tr>
+            <tr>
+                <td>Linux</td>
+                <td>Windows</td>
+            </tr>
+            <tr>
+                <td>GitHub</td>
+                <td>Git</td>
+            </tr>
+            <tr>
+              <td class="last">Wordpress</td>
+            </tr>
+          </tbody>
+         
+        </table>
+       </div>
+        </div>
+      </div>
+    
+      
+    
+
+    <ul id="repositories" class="list-group"></ul>
+        <button onclick="loadRepo()" class="btn btn-info">
             Push for repos
-          </button>
-    <h3>Github Repos json object https://api.github.com/users/RonnieKemper/repos:</h3>
+        </button>
+    </div>
+
+
+
+    
+    <!-- <h3>Github Repos json object https://api.github.com/users/RonnieKemper/repos:</h3> -->
     <pre style="word-wrap: break-word; white-space: pre-wrap;">
         <p id="githubRepos"></p><br><br><br><br><br><br><br><br>
     </pre>
 
 
-    
+    <!--
     <div id="container">
         
         <div id="footer">
@@ -59,7 +179,9 @@
                 Ronspoolco@gmail.com</p>
         </div>
     </div>
+    -->
 
     <script src="script.js"></script>
+    
   </body>
 </html>
