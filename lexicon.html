@@ -1,0 +1,1849 @@
+
+<div>
+    <pre class="prettyprint">
+#BOF CTRL+F to search file
+#AUTHORS: RONNIE KEMPER https://github.com/RonnieKemper
+http://ec2-3-88-235-136.compute-1.amazonaws.com/portfolio/index.html
+https://www.linkedin.com/in/ronald-kemper-9882b0220/
+
+table of contents for use with CTRL+F:
+API reference (, = or)
+
+files/ express/ config.json, app.js, routes/users.js, routes/index, services/passport.js, services/auth.js
+files/ angular/
+files/ react/
+files/flexbox /html/, css #bootstrap > flexbox
+mobile-development/ cordova, ionic
+files/bootstrap/html/ head, changingthemes, changing-theme-colors, breakpoints, 
+mediaQueries, sizingToContent, self-allignment, vertical-allignment, horizontal-allignment,
+gridsystem, buttons, grouping, grouping-form-controls, inputgroups, offsetColumns
+commands/ express, CMD, BASH, python, github
+keybinds/ windows, vscode, browser
+languages/ javascript/ ajax, jquery, /python/, /SQL/, /HTML/, /CSS/
+tools/ QRgen, colorWheel, regexGen, languageDetection
+
+###node node.js 
+https://medium.com/swlh/run-python-script-from-node-js-and-send-data-to-browser-15677fcf199f
+###front end frameworks and libraries
+###flexbox  #dynamic resolution Flexbox is a layout mode that is intended to accommodate different screen sizes, various display devices, and offers an alternative for determining the overall appearance of a web page. Using Flexbox gives you complete control over the direction, alignment, size, and order of your website's boxes.
+files/flexbox
+files/flexbox/html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flexbox-evenly-space-and-distribute-photos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="site-header">
+    <a href="#" class="brand">flexbox-evenly-space-and-distribute-photos</a>
+    <nav class="nav"></nav>
+    </header>
+    <div class="container">
+    <div class="photos">
+        <img src="images/one.png">
+        <img src="images/two.png">
+        <img src="images/three.png">
+        <img src="images/four.png">
+        <img src="images/five.png">
+        <img src="images/six.jpg">
+        <img src="images/seven.jpg">
+        <img src="images/eight.jpg">
+        <img src="images/nine.jpg">
+        <img src="images/ten.jpg">
+    </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+files/flexbox/css
+There are five values for the justify-content property:
+justify-content:
+    center
+    flex-start
+    flex-end
+    space-around
+    space-between
+display: flex;
+Without display: flex, the browser would ignore all flexbox properties
+
+photos example:
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+.site-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: aqua;
+}
+.container {
+display: flex;
+justify-content: center;
+}
+.photos {
+display: flex;
+background-color: white;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-around;
+padding: 5px;
+max-width: 980px;
+align-items: center;
+}
+
+.photos img {
+display: flex;
+background-color: #fff;
+width: 20%;
+justify-content: space-around;
+padding: 10px;
+}
+
+###bootstrap files/bootstrap #css boilerplate
+files/bootstrap/html
+<!DOCTYPE html>
+<html>
+
+<head> files/bootstrap/html/head
+    <title>Bootstrap Lesson</title>
+    <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" 
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" 
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    files/bootstrap/html/changingthemes
+    The first link element in the head of your index.html should contain a link to https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css. This is the one you want to remove.
+    next, navigate to https://www.bootstrapcdn.com/bootswatch/
+
+    files/bootstrap/html/changing-theme-colors
+    primary
+    secondary
+    success
+    danger
+    warning
+    info
+    light
+    dark
+    muted
+    white
+    <p class="text-success">This is the color of success!</p>
+    <p class="text-danger">Danger, there be lions ahead!</p>
+    <p class="text-muted">This text may not apply to the user anymore.</p>
+    <div class="bg-primary text-white">This will add emphasis to the element.</div>
+    <div class="bg-info text-white">Put some interesting info here!</div>
+    <div class="bg-white text-dark">Sometimes plain is just right.</div>
+    To change the color of my font to the warning color use the text-warning class.
+    Bootstrap uses semantic names for it's colors rather than specific color names
+    
+    files/bootstrap/html/breakpoints
+    sm: 576px and up
+    md: 768px and up
+    lg: 992px and up
+    xl: 1200px and up
+    Breakpoints eliminate the need for writing our own media queries.
+    You can't specify more than one breakpoint class for an element.
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+            <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+            <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+            <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+        </div>
+    </div>
+    files/bootstrap/html/mediaQueries
+    // Small devices known as the 'sm' breakpoint (landscape phones, 576px and up) 
+    @media (min-width: 576px) { ... }
+    // Medium devices known as the 'md' breakpoint (tablets, 768px and up)
+    @media (min-width: 768px) { ... }
+    // Large devices known as the 'lg' breakpoint (desktops, 992px and up)
+    @media (min-width: 992px) { ... }
+    // Extra large devices known as the 'xl' breakpoint (large desktops, 1200px and up)
+    @media (min-width: 1200px) { ... }
+    https://wozu.exeterlms.com/student/84809/lesson/71746/topic/897457
+    Popular Media Query Examples
+Phones
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 414px)
+and (max-device-width: 736px)
+and (-webkit-min-device-pixel-ratio: 3) {
+
+}
+
+/* Portrait */
+@media only screen
+and (min-device-width: 414px)
+and (max-device-width: 736px)
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: portrait) {
+
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 414px)
+and (max-device-width: 736px)
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: landscape) {
+
+}
+Tablet
+/* ----------- iPad 3 and 4 ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+Laptops
+/* ----------- Non-Retina Screens ----------- */
+@media screen
+and (min-device-width: 1200px)
+and (max-device-width: 1600px)
+and (-webkit-min-device-pixel-ratio: 1) {
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen
+and (min-device-width: 1200px)
+and (max-device-width: 1600px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (min-resolution: 192dpi) {
+}
+Watches
+/* ----------- Apple Watch ----------- */
+@media
+(max-device-width: 42mm)
+and (min-device-width: 38mm) {
+}
+
+/* ----------- Moto 360 Watch ----------- */
+@media
+(max-device-width: 218px)
+and (max-device-height: 281px) {
+
+}
+
+    files/bootstrap/html/sizingToContent
+    <div class="container">
+        <div class="row">
+            <div class="col-auto">Div auto adjusts to content</div>
+            <div class="col">Div spans available space </div>
+        </div>
+    </div>
+
+    files/bootstrap/html/self-allignment
+    align-self-start: Aligns the column to the top of the row.
+    align-self-center: Aligns the column to the center of the row.
+    align-self-end: Aligns the column to the bottom of the row.
+    <div class="container">
+        <div class="row" style="height: 200px; border: 1px dotted blue;">
+            <div class="col align-self-start">One of three columns</div>
+            <div class="col align-self-center">One of three columns</div>
+            <div class="col align-self-end">One of three columns</div>
+        </div>
+    </div>
+
+    files/bootstrap/html/vertical-allignment
+    align-items-start: Aligns columns to the top of the row.
+    align-items-center: Aligns columns to the middle of the row.
+    align-items-end: Aligns columns to the bottom of the row.
+    <div class="container">
+        <div class="row align-items-start" style="height: 200px; border: 1px dotted blue;">
+            <div class="col">One of three columns</div>
+            <div class="col">One of three columns</div>
+            <div class="col">One of three columns</div>
+        </div>
+        <div class="row align-items-center" style="height: 200px; border: 1px dotted blue;">
+            <div class="col">One of three columns</div>
+            <div class="col">One of three columns</div>
+            <div class="col">One of three columns</div>
+        </div>
+        <div class="row align-items-end" style="height: 200px; border: 1px dotted blue;">
+            <div class="col">One of three columns</div>
+            <div class="col">One of three columns</div>
+            <div class="col">One of three columns</div>
+        </div>
+    </div>
+    files/bootstrap/html/horizontal-allignment
+    justify-content-start
+    justify-content-center
+    justify-content-end
+    justify-content-around
+    justify-content-between
+    <div class="container">
+        <div class="row justify-content-start">
+            <div class="col-4">One of two columns</div>
+            <div class="col-4">One of two columns</div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-4">One of two columns</div>
+            <div class="col-4">One of two columns</div>
+        </div>
+        <div class="row justify-content-end">
+            <div class="col-4">One of two columns</div>
+            <div class="col-4">One of two columns</div>
+        </div>
+        <div class="row justify-content-around">
+            <div class="col-4">One of two columns</div>
+            <div class="col-4">One of two columns</div>
+        </div>
+        <div class="row justify-content-between">
+            <div class="col-4">One of two columns</div>
+            <div class="col-4">One of two columns</div>
+        </div>
+    </div>
+
+    files/bootstrap/html/
+    <h1>Hello World!</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col">One of thirteen columns</div>
+            <div class="col">One of thirteen columns</div>
+            <div class="col">One of thirteen columns</div>
+            <div class="col">One of thirteen columns</div>
+            <div class="col">One of thirteen columns</div>
+            <div class="col">One of thirteen columns</div>
+            <div class="col">One of thirteen columns</div>
+            <div class="col">One of thirteen columns</div>
+            <div class="col">One of thirteen columns</div>
+            <div class="col">One of thirteen columns</div>
+            <div class="col">One of thirteen columns</div>
+            <div class="col">One of thirteen columns</div>
+            <div class="col">One of thirteen columns</div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row" name="dynamic quantity columns class">
+            <div class="col-8">This div uses 8 columns</div>
+            <div class="col-4">This div uses 4 columns</div>
+        </div>
+    </div>
+    files/bootstrap/html/buttons
+    <button class="btn" style="background-color: aquamarine;">Click Me</button>
+    <input type="button" class="btn" value="Click Me!" style="background-color: aquamarine;" />
+    <a href="http://google.com" class="btn" style="background-color: aquamarine;">Go To Google</a>
+    <button class="btn btn-primary">Submit</button>
+    <button class="btn btn-secondary">Cancel</button>
+    <button class="btn btn-outline-primary">Submit</button>
+    <button class="btn btn-outline-secondary">Cancel</button>
+    <button class="btn btn-primary btn-sm">Small Button</button>
+    <button class="btn">Default Button</button>
+    <button class="btn btn-success btn-lg">Large Button</button>
+    <button class="btn btn-block btn-primary">Block Button</button>
+    <p>to add bootstrap styling to a button use the btn class
+    To set the border of a button to the secondary color use the btn-outline-secondary class.
+    To make a button appear the same width as it's parent element use the btn-block class.
+    </p>
+
+    files/bootstrap/html/gridsystem
+    Bootstrap uses a system of containers, rows, and columns to define how elements should be sized and aligned on a webpage. If this sounds similar to Flexbox, which you learned in an earlier lesson, that's because Bootstrap uses Flexbox to manage the layout of elements on the page. The primary difference between the grid systems of Bootstrap and Flexbox is the use of classes to define the Bootstrap elements. In Flexbox, you learned to use CSS rules to define the layout, but in Bootstrap the CSS rules are already pre-defined. Instead, you use classes in your HTML to specify which of the CSS rules should be applied
+    https://wozu.exeterlms.com/student/72796/lesson/61865/topic/708875
+    The root element of a Bootstrap grid is the container element. It is the element which will contain the entire grid and must be defined using one of two container classes. You can use either the container class or the container-fluid class.
+        <div class="container">
+            <p>I am a slightly longer paragraph than I probably should be.  I am taking up the entire width
+            of the page to demonstrate the difference between a container and a container-fluid class. 
+            Bootstrap will take care of the rest.</p>
+        </div>
+    files/bootstrap/html/gridsystem/container-fluid    fills width of screen
+    flexbox vs bootstrap: bootstrap uses flexbox
+    <div class="container-fluid">
+        <p>I am a slightly longer paragraph than I probably should be.  I am taking up the entire width of
+        the page to demonstrate the difference between a container and a container-fluid class.  Bootstrap
+        will take care of the rest.</p>
+    </div>
+    files/bootstrap/html/gridsystem/container
+    bootstrap uses flexbox
+    rows and columns
+    <div class="container">
+        <div class="row">
+            <div class="col" style="border: 1px solid black">One of three columns</div>
+            <div class="col" style="border: 1px solid black">One of three columns</div>
+            <div class="col" style="border: 1px solid black">One of three columns</div>
+        </div>
+    </div>
+    files/bootstrap/html/grouping
+    <div class="container">
+        <form>
+            <div class="form-row">
+                <div class="col-md-6 form-group">
+                    <label for="firstName">First Name</label>
+                    <input id="firstName" type="text" class="form-control">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="lastName">Last Name</label>
+                    <input id="lastName" type="text" class="form-control">
+                </div>
+            </div>
+        </form>
+    </div>
+    files/bootstrap/html/grouping-form-controls
+    Forms can use the same grid system classes that you use with other elements
+    To use a more compact layout for the rows of your forms, use the form-row
+    <div class="container">
+        <form>
+            <div class="form-group row">
+                <label for="input1">Sample label</label>
+                <input type="text" class="form-control" id="input1" placeholder="Sample Text">
+            </div>
+            <div class="form-group">
+                <label for="input2">Another label</label>
+                <input type="text" class="form-control" id="input2" placeholder="Sample Text">
+            </div>
+        </form>
+    </div>
+
+    files/bootstrap/html/inputgroups
+    <div class="container">
+        <form>
+            <div class="input-group input-group-sm">
+                <input type="text" class="form-control">
+                <div class="input-group-append">
+                    <span class="input-group-text">Small</span>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <input type="text" class="form-control">
+                <div class="input-group-append">
+                    <span class="input-group-text">Default</span>
+                </div>
+            </div>
+
+            <div class="input-group input-group-lg">
+                <input type="text" class="form-control">
+                <div class="input-group-append">
+                    <span class="input-group-text">Large</span>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    files/bootstrap/html/offsetColumns
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">.col-sm-4</div>
+            <div class="col-sm-4 offset-sm-4">.col-sm-4 .offset-sm-4</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3 offset-sm-3">.col-sm-3 .offset-sm-3</div>
+            <div class="col-sm-3 offset-sm-3">.col-sm-3 .offset-sm-3</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 offset-sm-3">.col-sm-6 .offset-sm-3</div>
+        </div>
+    </div>
+    Each row has an element that is shifted to the left by the number of columns specified by the offset-sm-* class.
+
+
+</body>
+</html>
+
+###angular languages/javascript 
+
+integrate front-back end:
+https://www.bezkoder.com/integrate-angular-8-node-js/
+ng g s servicename
+
+frontend/angular.json: build.outputpath from "dist/pluggedin" to "./static"
+ng build --prod
+copy all files from Angular static folder to app/views folder
+
+
+server.js:
+const express = require("express");
+const bodyParser = require("body-parser");
+const cors = require("cors");
+const path = __dirname + '/app/views/';
+const app = express();
+app.use(express.static(path));
+var corsOptions = {
+origin: "http://localhost:8081"
+};
+app.use(cors(corsOptions));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+const db = require("./app/models");
+db.sequelize.sync();
+app.get('/', function (req,res) {
+res.sendFile(path + "index.html");
+});
+require("./app/routes/turorial.routes")(app);
+// set port, listen for requests
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+console.log(`Server is running on port ${PORT}.`);
+});
+
+files/angular
+
+errors/angular
+C:\Users\ronsp\OneDrive\Desktop\ID\DEV\OPS\SouthernCareerInstitute\02Angular\AngularL04>npm start
+> portfolio-starter@0.0.0 start
+> ng serve
+This version of CLI is only compatible with Angular versions ^13.0.0 || ^13.0.0-next,
+but Angular version 6.1.0 was found instead.
+Please visit the link below to find instructions on how to update Angular.
+https://update.angular.io/
+
+ng new coffeeApp
+ng new taskMgr
+
+
+
+ng new portfolio
+npm install
+ng generate component loginForm
+ng serve --open
+
+
+
+ng g m app-music --flat --module=app
+
+ng generate class models/Contact
+ng generate class models/task
+ng generate service services/Contact
+ng generate enum types/permission
+ng serve --open
+ng g class tasks
+
+npm install -g json-server
+json-server --watch mockdb.json :run this in cmd, then ng serve from vscode terminal, both have to run, not too sure why.
+
+
+ng g m modules/app-music --flat --module=app
+ng g m modules/app-tasks --flat --module=app
+
+ng generate class shared/models/music
+ng generate component modules/display-music
+ng generate component modules/task-list
+
+ng g c modules/movies/components/display-movie
+
+ng generate service modules/services/TaskService
+C:\Users\ronsp\OneDrive\Desktop\SouthernCareerInstitute\ProgrammingFoundationsJavaScript\AngularAndTypeScriptIntro\FullStackWeb\FEFAngular\l10HandsOn\taskMgr\src\app\modules\services
+
+
+ng g c ViewTask
+ng g c NewTask
+ng g c UpdateTask
+ng g c Details
+const routes: Routes = [
+{
+    path: 'home',
+    component: ViewTaskComponent
+},
+{
+    path: 'add',
+    component: NewTaskComponentComponent
+},
+{
+    path: 'update/:id',
+    component: UpdateTaskComponentComponent
+},
+{
+    path: 'details/:id',
+    component: DetailsComponentComponent
+},
+{
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
+}
+];
+
+
+
+
+##jquery
+##AJAX
+##react languages/javascript/react
+files/react
+
+api/Mastercardapi
+https://na-gateway.mastercard.com/api/documentation/integrationGuidelines/index.html
+https://na-gateway.mastercard.com/api/rest/version/1/information
+
+###back end frameworks #sitemap
+EXPRESS #http://localhost:3000 #local development server for express languages/javascript
+http:/localhost:3000/users/signup
+http:/localhost:3000/users/login
+http:/localhost:3000/users/profile
+http:/localhost:3000/users
+http://localhost:3000/users/:id
+
+
+commands/express/install
+express --view=hbs portfolio #generate express project #workflows/a1
+npm install
+code . #open cwd in vsCode
+
+
+##Express advanced authentication bcrypt cookie passport
+
+#express database migrations, auth
+
+npm install --save mysql
+npm install --save mysql2 sequelize@4.43.0 jsonwebtoken
+npm install -g sequelize-cli
+npm install --save bcryptjs
+npm install --save passport express-session
+npm install --save passport-local
+npm install -g mysql2
+npm install -g sequelize-auto@0.4.29
+npm install -g mysql
+npm install -g sequelize-auto-migrations
+
+
+commands/express/sequelize #sequalize is ORM for db modeling
+sequelize init --force
+sequelize-auto -h localhost -d portfolio -u root -x Password1! -o "./models" -t category
+sequelize model:generate --name users --attributes Id:integer,FirstName:string,LastName:string,Email:string,Username:string,Password:string,Admin:boolean --force
+makemigration --name portfolio
+sequelize db:migrate
+
+makemigration --name initial_migration
+
+nodemon #run express app #start express app
+
+makemigration --name actor_model_dob
+
+sequelize model:generate --name users --attributes UserId:integer,FirstName:string,LastName:string,Email:string,Username:string,Password:string,Admin:boolean
+makemigration --name initial_migration
+sequelize db:create
+sequelize db:migrate
+
+
+services/passport.js file: create this dir
+// Bring in the required libraries
+var passport = require('passport');
+var LocalStrategy = require('passport-local').Strategy;
+var models = require('../models');
+
+// Configure the login validation
+passport.use(
+'local',
+new LocalStrategy(function (username, password, done) {
+    models.users.findOne({ where: { Username: username } })
+    .then(user => {
+        if (!user) {
+        return done(null, false, { message: 'Incorrect username.' });
+        }
+        if (user.Password !== password) {
+        return done(null, false, { message: 'Incorrect password.' });
+        }
+        return done(null, user);
+    })
+    .catch(err => {
+        if (err) { return done(err); }
+    });
+})
+);
+
+// Stores the user id in the user session
+passport.serializeUser((user, callback) => {
+callback(null, user.UserId);
+});
+
+// Queries the database for the user details and adds to the request object in the routes
+passport.deserializeUser((id, callback) => {
+models.users
+    .findByPk(id)
+    .then(user => callback(null, user))
+    .catch(err => callback(err));
+});
+
+module.exports = passport;
+
+files/express/services/auth.js file:
+const jwt = require('jsonwebtoken');
+const bcrypt = require("bcryptjs");
+
+const models = require('../models/index');
+
+module.exports = {
+    verifyUser: function (token) {  //<--- receive JWT token as parameter
+        try {
+            let decoded = jwt.verify(token, 'secretkey'); //<--- Decrypt token using same key used to encrypt
+            return models.users.findByPk(decoded.UserId); //<--- Return result of database query as promise
+        } catch (err) {
+            console.log(err);
+            return null;
+        }
+    },
+    signUser: function(user) {
+        const token = jwt.sign(
+        {
+            Username: user.Username,
+            UserId: user.UserId,
+            Admin: user.Admin
+        },
+        'secretkey',
+        {
+            expiresIn: '1h'
+        }
+        );
+        return token;
+    },
+    hashPassword: function(plainTextPassword) {
+        let salt = bcrypt.genSaltSync(10);
+        let hash = bcrypt.hashSync(plainTextPassword, salt);
+        return hash;
+    },
+    comparePasswords: function (plainTextPassword, hashedPassword) {
+        return bcrypt.compareSync(plainTextPassword, hashedPassword)
+    }
+
+};
+
+//module.exports = authService;
+
+files/express/routes/users.js file if it is not already added:
+const authService = require("../services/auth");
+
+files/express/models/users.js file:
+
+'use strict';
+const {
+Model
+} = require('sequelize');
+module.exports = (sequelize, DataTypes) => {
+//   class users extends Model {
+//     /**
+//      * Helper method for defining associations.
+//      * This method is not a part of Sequelize lifecycle.
+//      * The `models/index` file will call this method automatically.
+//      */
+//     static associate(models) {
+//       // define association here
+//     }
+//   }
+//   users.init({
+//     Id: DataTypes.INTEGER,
+//     FirstName: DataTypes.STRING,
+//     LastName: DataTypes.STRING,
+//     Email: DataTypes.STRING,
+//     Username: DataTypes.STRING,
+//     Password: DataTypes.STRING,
+//     Admin: DataTypes.BOOLEAN
+//   }, {
+//     sequelize,
+//     modelName: 'users',
+//   });
+//   return users;
+// };
+var users = sequelize.define(
+'users',
+{
+    id: {
+    allowNull: false,
+    autoIncrement: true,
+    primaryKey: true,
+    type: DataTypes.INTEGER
+    },
+    FirstName: DataTypes.STRING,
+    LastName: DataTypes.STRING,
+    Email: {
+    type: DataTypes.STRING,
+    unique: true
+    },
+    Username: {
+    type: DataTypes.STRING,
+    unique: true
+    },
+    Password: DataTypes.STRING,
+    createdAt: DataTypes.DATE,
+    updatedAt: DataTypes.DATE,
+    Admin: DataTypes.BOOLEAN
+},
+{}
+);
+
+return users;
+};
+
+users.js:
+var passport = require('../services/passport'); // <--- Add this code
+
+files/express/routes/users.js:
+
+router.get('/login', function(req, res, next) {
+res.render('login');
+});
+
+// router.post('/login', function(req, res, next) {
+//   models.users
+//     .findOne({
+//       where: {
+//         Username: req.body.username,
+//         Password: req.body.password
+//       }
+//     })
+//     .then(user => {
+//       if (user) {
+//         res.send('Login succeeded!');
+//       } else {
+//         res.send('Invalid login!');
+//       }
+//     });
+// });
+router.post('/login', passport.authenticate('local', { failureRedirect: '/users/login' }),
+function (req, res, next) { res.redirect('profile') });  //<--- Called Without UserID
+
+router.get('/profile', function (req, res, next) {
+if (req.user) {
+    models.users
+    .findByPk(parseInt(req.user.UserId))
+    .then(user => {
+        if (user) {
+        res.render('profile', {
+            FirstName: user.FirstName,
+            LastName: user.LastName,
+            Email: user.Email,
+            Username: user.Username
+        });
+        } else {
+        res.send('User not found');
+        }
+    });
+} else {
+    res.redirect('/users/login');
+}
+});
+
+router.post('/signup', function (req, res, next) {
+models.users
+    .findOrCreate({
+    where: {
+        Username: req.body.username
+    },
+    defaults: {
+        FirstName: req.body.firstName,
+        LastName: req.body.lastName,
+        Email: req.body.email,
+        Password: authService.hashPassword(req.body.password) //<--- Change to this code here
+    }
+    })
+    .spread(function (result, created) {
+    if (created) {
+        res.send('User successfully created');
+    } else {
+        res.send('This user already exists');
+    }
+    });
+});
+
+
+files/express/app.js:
+var express = require('express');
+var router = express.Router();
+var mysql = require('mysql2');
+var createError = require('http-errors');
+var express = require('express');
+var path = require('path');
+var cookieParser = require('cookie-parser');
+var logger = require('morgan');
+var models = require('./models');
+var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/users');
+var passport = require('passport');  // <--- Add this code to your declarations
+var session = require('express-session'); // <--- Add this code to your declarations
+// ...
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Add these three lines of code
+app.use(session({ secret: 'perilous journey' }));
+app.use(passport.initialize());  
+app.use(passport.session());
+
+app.use('/', indexRouter);
+app.use('/users', usersRouter);
+// ...
+
+
+
+
+files/express/config/config.json:
+{
+"development": {
+    "username": "root",
+    "password": "Password1!",
+    "database": "sakila",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "define": { "timestamps" : false }
+},
+"test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+},
+"production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+}
+}
+
+
+            "updatedAt": {
+                "type": Sequelize.DATE,
+                "field": "updatedAt",
+                "allowNull": false
+            }
+
+files/express/views/signup.hbs:
+<h1>Welcome! Please sign up</h1>
+
+<form id="signup" name="signup" method="POST" action="/users/signup">
+    <div>
+        <label for="name">First Name: </label>
+        <input type="text" name="firstName" required>
+    </div>
+    <div>
+        <label for="name">Last Name: </label>
+        <input type="text" name="lastName" required>
+    </div>
+    <div>
+        <label for="name">Email: </label>
+        <input type="text" name="email" required>
+    </div>
+    <div>
+        <label for="name">Username: </label>
+        <input type="text" name="username" required>
+    </div>
+    <div>
+        <label for="name">Password: </label>
+        <input type="password" name="password" required>
+    </div>
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+</form>
+
+files/express/views/login.hbs:
+<h1>Welcome! Please log in</h1>
+<form id="login" name="login" method="POST" action="/users/login">
+    <div>
+        <label for="name">Username: </label>
+        <input type="text" name="username" required>
+    </div>
+    <div>
+        <label for="name">Password: </label>
+        <input type="text" name="password" required>
+    </div>
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+</form>
+
+files/express/views/profile.hbs:
+<h1>Hello {{FirstName}} {{LastName}}</h1>
+<h2>Email: {{Email}}</h2>
+<h3>Username: {{Username}}</h3>
+
+files/express/routes/users.js:
+var express = require('express');
+var router = express.Router();
+const mysql = require('mysql2');
+var models = require('../models');
+/* GET users listing. */
+router.get('/', function(req, res, next) {
+res.send('respond with a resource');
+});
+
+router.get('/signup', function(req, res, next) {
+res.render('signup');
+});
+
+router.post('/signup', function(req, res, next) { #express http post method
+models.users
+    .findOrCreate({
+    where: {
+        Username: req.body.username
+    },
+    defaults: {
+        FirstName: req.body.firstName,
+        LastName: req.body.lastName,
+        Email: req.body.email,
+        Password: req.body.password
+    }
+    })
+    .spread(function(result, created) {
+    if (created) {
+        res.redirect('login');  //<---Change this line to redirect to the login screen
+    } else {
+        res.send('This user already exists');
+    }
+    });
+});
+
+router.get('/profile/:id', function (req, res, next) { #express http get method
+models.users
+    .findByPk(parseInt(req.params.id))
+    .then(user => {
+    if (user) {
+        res.render('profile', {
+        FirstName: user.FirstName,
+        LastName: user.LastName,
+        Email: user.Email,
+        Username: user.Username
+        });
+    } else {
+        res.send('User not found');
+    }
+    });
+});
+
+router.post('/login', function(req, res, next) { #express http post method login
+models.users
+    .findOne({
+    where: {
+        Username: req.body.username,
+        Password: req.body.password
+    }
+    })
+    .then(user => {
+    if (user) {
+        res.redirect('profile/' + user.UserId); //<---Change this line to redirect to the profile
+    } else {
+        res.send('Invalid login!');
+    }
+    });
+});
+
+module.exports = router;
+
+languages/HTML
+languages/HTML/base
+<!doctype html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+    
+    </body>
+</html
+
+
+files/express/config.json
+{ 
+"development": {
+    "username": "root",
+    "password": "Password1!",
+    "database": "bulletinboard ",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+},
+"test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+},
+"production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+}
+}
+
+###SQL #MYSQL #database #language #structured query languages/sql
+languages/sql/createdb #create new database sql server
+CREATE DATABASE IF NOT EXISTS portfolio;
+USE portfolio;
+
+CREATE TABLE IF NOT EXISTS `users` (
+    `UserId` int(11) NOT NULL auto_increment primary key,   
+    `id` int DEFAULT NULL,
+`FirstName` varchar(250) NOT NULL default '', 
+    `LastName` varchar(250)  NOT NULL default '',     
+    `Username`  varchar(250)  NOT NULL UNIQUE,     
+    `Password` varchar(250) NOT NULL,    
+    `Email`  varchar(250)  NOT NULL UNIQUE,
+`phonenumber` varchar(250) NOT NULL UNIQUE,
+    `Admin` boolean not null default 0,    
+    `createdAt` DATE NOT NULL,
+    `updatedAt` DATE NOT NULL
+); 
+
+CREATE TABLE IF NOT EXISTS `visitors` (
+    `Id` int(11) NOT NULL auto_increment primary key,   
+    `FirstName` varchar(250) NOT NULL default '', 
+    `LastName` varchar(250)  NOT NULL default '',  
+`public_ip` varchar(250) NOT NULL default '',    
+`private_ip` varchar(250) NOT NULL default '',
+    `screen_resolution`  varchar(250)  NOT NULL UNIQUE, 
+    `Email`  varchar(250)  NOT NULL UNIQUE,
+`phonenumber` varchar(250) NOT NULL UNIQUE,
+    `Admin` boolean not null default 0,    
+    `createdAt` DATE NOT NULL,
+    `updatedAt` DATE NOT NULL
+); 
+
+
+
+CREATE TABLE IF NOT EXISTS `posts` (
+    `PostId` int(11) NOT NULL auto_increment primary key,
+    `PostTitle` varchar(250) NOT NULL default '', 
+    `PostBody` varchar(250)  NOT NULL default '',
+    UserId int,
+    FOREIGN KEY(UserId) REFERENCES users(UserId),
+    `createdAt` DATE NOT NULL,
+    `updatedAt` DATE NOT NULL
+);
+#SELECT * FROM Clearwater.users;
+SELECT * FROM Clearwater.posts;
+
+CREATE VIEW initialCustomers as
+select first_name, last_name, email from sakila.customer where customer_id < 100
+
+SELECT * FROM initialCustomers;
+
+CREATE TABLE ProductList (
+    ProductId INTEGER PRIMARY KEY AUTO_INCREMENT,
+    ProductName varchar(255) NOT NULL,
+    Price int NOT NULL,
+    DateAdded DATETIME NOT NULL,
+    EmployeeSupportId int NOT NULL
+    )
+
+INSERT INTO ProductList (ProductName, Price, DateAdded, EmployeeSupportId)
+VALUES ("banana", 1.00, "2019-01-17 08:43:11", 2);
+SELECT * from ProductList
+SELECT * FROM actor WHERE actor_id = 203
+SELECT * FROM staff WHERE password IS NULL
+SELECT * FROM staff WHERE first_name IS NOT NULL AND store_id IS NOT NULL
+UPDATE address
+SET address2 = "Canada"
+WHERE district = "Alberta"
+INSERT INTO sakila.actor (first_name, last_name, last_update) VALUES ("Emma", "Stone")
+SELECT * FROM actor WHERE first_name = "Emma" AND last_name = "Stone"
+UPDATE actor SET first_name = "Emmy", last_name = "Rock" WHERE actor_id = 203
+UPDATE address
+SET address2 = "Australia"
+WHERE district = "QLD"
+
+version control system
+github 
+commands/github/clone
+git clone 
+Create Github repo and add existing project using git bash & github CLI:
+git init -b main
+gh repo create project-name
+git pull --set-upstream origin main
+git add . && git commit -m "initial commit" && git push
+
+commands/github/remote  
+git remote add origin <https://github.com/RonnieKemper/IonicBook.git>
+git remote -v
+git push origin main
+
+commands/github/branchs
+git branch Ronnie
+git checkout Ronnie
+
+commands/github/commit
+git init
+git pull #gets update from remote repo
+#git add .
+git add . --all
+git status
+git commit -m "modified some doc files"
+#git push
+git push origin master
+
+press escape and type :wq and press enter
+
+
+###languages
+##windows #shell #cli #cmd commands/cmd
+copy /b nul filename.txt
+
+commands/cmd/killProcessRunningOnport
+netstat -ano | findstr :3306
+netstat -ano | findstr :3000
+taskkill /PID 5476 /F
+taskkill /PID 4912 /F
+net start mysql
+
+
+
+keybinds/windows
+
+win + R, cmd ctrl+shift+enter, opens cmd
+win + s, search internet/drive
+alt+t, switch tab
+crtl + f, find text on page
+ctrl + z, undo
+ctrl + a, select all
+ctrl + c, copy
+ctrl + v, paste 
+ctrl+shift+ arrow up, highlight line behind cursor
+ctrl+shift+ arrow down, highlight line in front of cursor
+ctrl+shift+ arrow right/left, highlight line by closest Word 
+ctrl+ arrow right/left, move cursor by 1 Word 
+ctrl+alt+delete taskmgr
+
+
+keybinds/vscode
+ctrl+j: open commandline in vscode
+ctrl+shift+p: show all commands
+
+keybinds/browser
+ctrl+j: open js console
+
+
+
+
+
+
+
+
+
+
+
+
+##linux #bash commands/BASH
+
+###python
+commands/python:
+C:\Python310\python.exe -m pip install --upgrade pip
+##python modules
+pip install argon2-cffi #argon2 encryption module
+python -m pip install "kivy[base]" #frontend python cross-compatible gui library
+pip install selenium #web browser automation #https://chromedriver.chromium.org/downloads
+pip install bs4 #web browser automation
+
+
+##javascript
+
+
+##hosting #deployment
+#aws
+ec2 # sign in to AWS elastic cloud 2
+#save ssh keys to C:\Users\ronsp\OneDrive\Desktop\ID\DEV\SSH_Keys #ssh key directory
+https://signin.aws.amazon.com/signin?redirect_uri=https%3A%2F%2Fus-east-1.console.aws.amazon.com%2Fec2%2Fv2%2Fhome%3Fregion%3Dus-east-1%26state%3DhashArgs%2523InstanceDetails%253AinstanceId%253Di-0daab7f622a29041d%26isauthcode%3Dtrue&client_id=arn%3Aaws%3Aiam%3A%3A015428540659%3Auser%2Fec2&forceMobileApp=0&code_challenge=sIBaS4tQD69quKI0nqJGI6MKH4A-jV5TpDx_RyKM29U&code_challenge_method=SHA-256 #sign in to ec2
+
+https://us-east-1.console.aws.amazon.com/ec2/v2/home?region=us-east-1#ImageDetails:imageId=ami-058ce12ad1cf79908 #select Cloud9ubuntu #AMI #server
+security group rules:
+ssh tcp 22 anywhere
+custom tcp rules tcp 8080 anywhere
+http tcp 80 anywhere
+https tcp 443 anywhere
+
+##instances:
+clearwater:
+https://us-east-1.console.aws.amazon.com/ec2/v2/home?region=us-east-1#InstanceDetails:instanceId=i-0bc16818d74ac7908
+ec2-3-93-242-129.compute-1.amazonaws.com
+#ec2 hostname: 
+ubuntu@ec2-3-93-242-129.compute-1.amazonaws.com
+
+
+##SSH commands/cmd/ssh:
+ssh -i "hs-key.pem" ubuntu@ec2-3-82-250-45.compute-1.amazonaws.com #connect to remote server via ssh on cmd 
+puttygen # convert .pem to .ppk 
+pageant #ssh key agent for remote connection, add key from putty gen then use putty command and enter host
+putty #ssh client, enter hostname login as user ubuntu
+
+git clone https://github.com/RonnieKemper/hackathon-starter.git #deploy project
+ls
+cd hackathon-starter
+nvm install 14
+nvm use 14
+node -v
+npm -v
+npm install
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6
+echo "deb [ arch=amd64,arm64 ] http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list
+sudo apt-get update
+sudo apt-get install -y mongodb-org
+sudo service mongod start
+cat /var/log/mongodb/mongod.log
+sudo systemctl status mongod
+npm start
+
+commands/cmd/deployment:
+echo "Installing 'node-cmd'"
+npm install node-cmd
+echo "Installing 'node-ssh'"
+npm install node-ssh
+echo "Running 'deploy.js'"
+node deploy.js
+
+files/express/deploy.js:
+var cmd = require('node-cmd');
+var path, node_ssh, ssh, fs;
+fs = require('fs');
+path = require('path');
+node_ssh = require('node-ssh');
+ssh = new node_ssh.NodeSSH(); 
+
+//run this first:
+//echo "Installing 'node-cmd'"
+//npm install node-cmd
+//echo "Installing 'node-ssh'"
+//npm install node-ssh
+//echo "Running 'deploy.js'"
+//node deploy.js
+
+// the method that starts the deployment process
+function main() {
+console.log('Deployment started.');
+sshConnect();
+}
+
+// installs PM2
+function installPM2() {
+return ssh.execCommand(
+    'sudo npm install pm2 -g', {
+    cwd: '/home/ubuntu'
+});
+}
+
+// transfers local project to the remote server
+function transferProjectToRemote(failed, successful) {
+return ssh.putDirectory(
+    '../hackathon-starter',
+    '/home/ubuntu/hackathon-starter-temp',
+    {
+    recursive: true,
+    concurrency: 1,
+    validate: function(itemPath) {
+        const baseName = path.basename(itemPath);
+        return (
+        baseName.substr(0, 1) !== '.' && baseName !== 'node_modules' // do not allow dot files
+        ); // do not allow node_modules
+    },
+    tick: function(localPath, remotePath, error) {
+        if (error) {
+        failed.push(localPath);
+        console.log('failed.push: ' + localPath);
+        } else {
+        successful.push(localPath);
+        console.log('successful.push: ' + localPath);
+        }
+    }
+    }
+);
+}
+
+// creates a temporary folder on the remote server
+function createRemoteTempFolder() {
+return ssh.execCommand(
+    'rm -rf hackathon-starter-temp && mkdir hackathon-starter-temp', {
+    cwd: '/home/ubuntu'
+});
+}
+
+// stops mongodb and node services on the remote server
+function stopRemoteServices() {
+return ssh.execCommand(
+    'pm2 stop all && sudo service mongod stop', {
+    cwd: '/home/ubuntu'
+});
+}
+
+// updates the project source on the server
+function updateRemoteApp() {
+return ssh.execCommand(
+    'mkdir hackathon-starter && cp -r hackathon-starter-temp/* hackathon-starter/ && rm -rf hackathon-starter-temp', {
+    cwd: '/home/ubuntu'
+});
+}
+
+// restart mongodb and node services on the remote server
+function restartRemoteServices() {
+return ssh.execCommand(
+    'cd hackathon-starter && sudo service mongod start && pm2 start app.js', {
+    cwd: '/home/ubuntu'
+});
+}
+
+// connect to the remote server
+function sshConnect() {
+console.log('Connecting to the server...');
+
+ssh
+    .connect({
+    // TODO: ADD YOUR IP ADDRESS BELOW (e.g. '12.34.5.67')
+    host: 'ec2-3-80-54-171.compute-1.amazonaws.com',
+    username: 'ubuntu',
+    privateKey: './labsuser.pem'
+    })
+    .then(function() {
+    console.log('SSH Connection established.');
+    console.log('Installing PM2...');
+    return installPM2();
+    })
+    .then(function() {
+    console.log('Creating `hackathon-starter-temp` folder.');
+    return createRemoteTempFolder();
+    })
+    .then(function(result) {
+    const failed = [];
+    const successful = [];
+    if (result.stdout) {
+        console.log('STDOUT: ' + result.stdout);
+    }
+    if (result.stderr) {
+        console.log('STDERR: ' + result.stderr);
+        return Promise.reject(result.stderr);
+    }
+    console.log('Transferring files to remote server...');
+    return transferProjectToRemote(failed, successful);
+    })
+    .then(function(status) {
+    if (status) {
+        console.log('Stopping remote services.');
+        return stopRemoteServices();
+    } else {
+        return Promise.reject(failed.join(', '));
+    }
+    })
+    .then(function(status) {
+    if (status) {
+        console.log('Updating remote app.');
+        return updateRemoteApp();
+    } else {
+        return Promise.reject(failed.join(', '));
+    }
+    })
+    .then(function(status) {
+    if (status) {
+        console.log('Restarting remote services...');
+        return restartRemoteServices();
+    } else {
+        return Promise.reject(failed.join(', '));
+    }
+    })
+    .then(function() {
+    console.log('DEPLOYMENT COMPLETE!');
+    process.exit(0);
+    })
+    .catch(e => {
+    console.error(e);
+    process.exit(1);
+    });
+}
+
+main();
+
+
+
+
+mobile-development/cordova/install
+npm install -g cordova
+cordova create camera
+cd camera
+cordova platform add browser
+cordova run browser
+
+mobile-development/cordova/camera
+https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-camera/index.html
+https://wozu.exeterlms.com/student/84809/lesson/71751/topic/897367
+
+cordova plugin add cordova-plugin-camera Older versions of cordova can still install via the __deprecated__ id
+
+cordova plugin add org.apache.cordova.camera It is also possible to install via repo url directly ( unstable )
+
+cordova plugin add https://github.com/apache/cordova-plugin-camera.git
+
+
+
+mobile-development/ionic
+https://ionicframework.com/docs/api
+https://ionicframework.com/docs/intro/cli
+https://github.com/driftyco/ionic-starter-tabs
+http://codepen.io/ionic/pen/odqCz
+http://embed.plnkr.co/dFvL8n/preview
+
+npm install -g @ionic/cli
+ionic start
+ionic start MyBlankIonicApp blank
+ionic start MyTabsIonicApp tabs
+ionic start MySideMenuIonicApp sidemenu
+ionic cordova platform add browser
+ionic cordova platform run browser
+ionic serve
+
+cd myApp
+ionic serve
+
+ionic/basic.html
+<ion-header>
+<ion-navbar>
+    <ion-title>Action Sheets</ion-title>
+</ion-navbar>
+</ion-header>
+
+<ion-content padding class="action-sheets-basic-page">
+<button ion-button block (click)="openMenu()">
+    Show Action Sheet
+</button>
+</ion-content>
+
+
+<!-- Disabled and readonly textarea in an item with a stacked label -->
+<ion-item>
+    <ion-label position="stacked">IonicButtons</ion-label>
+    <ion-textarea  rows="100" scroll="true"
+    warning
+    readonly
+    value=''
+    
+    ></ion-textarea>
+</ion-item>
+
+
+
+
+
+
+
+ionic/pages.ts
+import { Component } from '@angular/core';
+
+import { Platform, ActionSheetController } from 'ionic-angular';
+
+
+@Component({
+templateUrl: 'basic.html'
+})
+export class BasicPage {
+constructor(
+    public platform: Platform,
+    public actionsheetCtrl: ActionSheetController
+) { }
+
+openMenu() {
+    let actionSheet = this.actionsheetCtrl.create({
+    title: 'Albums',
+    cssClass: 'action-sheets-basic-page',
+    buttons: [
+        {
+        text: 'Delete',
+        role: 'destructive',
+        icon: !this.platform.is('ios') ? 'trash' : null,
+        handler: () => {
+            console.log('Delete clicked');
+        }
+        },
+        {
+        text: 'Share',
+        icon: !this.platform.is('ios') ? 'share' : null,
+        handler: () => {
+            console.log('Share clicked');
+        }
+        },
+        {
+        text: 'Play',
+        icon: !this.platform.is('ios') ? 'arrow-dropright-circle' : null,
+        handler: () => {
+            console.log('Play clicked');
+        }
+        },
+        {
+        text: 'Favorite',
+        icon: !this.platform.is('ios') ? 'heart-outline' : null,
+        handler: () => {
+            console.log('Favorite clicked');
+        }
+        },
+        {
+        text: 'Cancel',
+        role: 'cancel', // will always sort to be on the bottom
+        icon: !this.platform.is('ios') ? 'close' : null,
+        handler: () => {
+            console.log('Cancel clicked');
+        }
+        }
+    ]
+    });
+    actionSheet.present();
+}
+}
+
+ionic/styles.scss
+.action-sheets-basic-page {
+    .ion-md-share {
+        color: #ed4248;
+    }
+    .ion-md-arrow-dropright-circle {
+        color: #508ae4;
+    }
+    .ion-md-heart-outline {
+        color: #31d55f;
+    }
+    .action-sheet-cancel ion-icon,
+    .action-sheet-destructive ion-icon {
+        color: #757575;
+    }
+}
+
+
+
+
+###webSecurity
+
+#vulnerabilities
+# CVE search:
+https://cve.mitre.org/cve/search_cve_list.html
+
+# framework vulnerabilities
+- Wordpress (PHP)
+- CodeIgniter (PHP)
+- Express (Node.js)
+-   https://snyk.io/test/npm/express/4.0.0  #vuln list
+-   https://twitter.com/M157q_News_RSS  #twitter feed
+- Flask (Python)
+- Django (Python)
+- Ruby on Rails (Ruby)
+- ASP.NET MVC (C#)
+- SignalR (C#)
+- SpringMVC (Java)
+- Grails (Groovy)
+
+# language vulnerabilities
+- PHP
+- Node.js
+-   https://nodejs.org/ca/blog/vulnerability/jan-2022-security-releases/ # vulnerabilities
+- Python
+- Ruby
+- C#
+- Java
+- Groovy
+
+# OS vulnerabilities
+- Windows (Any version you like)
+-   https://www.cvedetails.com/vulnerability-list/vendor_id-26/product_id-102217/version_id-669655/Microsoft-Windows-11--.html
+- Linux (Any version you like)
+- Mac (Any version you like)
+
+# web server vulnerabilities
+- Apache
+-   https://httpd.apache.org/security/vulnerabilities_24.html
+- Nginx
+-   https://www.cvedetails.com/product/17956/Nginx-Nginx.html?vendor_id=10048   # vulnerabilities
+    https://www.acunetix.com/blog/web-security-zone/hardening-nginx/    # secConfigGuide
+
+- IIS
+
+
+#cyberdefense #cybersecurity
+boot kali in a virtual machine
+
+Five Phases of Ethical Hacking		#blue team tools
+Phase 1: Reconnaissance.							Leave minimal information that can be indirectly interacted with as counter-passive-recon. 
+    social engineering
+    Gather initial information
+    Determine the network range
+    Identify active machines
+    Discover open ports and access points
+    Fingerprint the operating system
+    Uncover services on ports
+    Map the network
+
+Phase 2: Scanning.
+    port scanning
+    vulnerability scanning
+    network mapping
+
+Phase 3: Gaining Access.
+Phase 4: Maintaining Access.
+Phase 5: Clearing Tracks.
+
+In preparation for the possibility of an attack?
+    perform an immediate max security audit. this would typically be like a pen-test.
+    we the administrators try to break into the system as an outsider. 
+    think like a hacker and look for all vulnerabilities both physical and cyber.
+    kali os is loaded with hacking tools to perform most functions of this.
+    enforce strong security policy amoungst employees.
+    redesign any insecure software. 
+
+    nmap vulnerability assessment
+
+Abnormal inbound web traffic is detected?
+    investigate the source of the traffic. it could be DDOS.
+    there is such thing as load balancers, reverse proxies, and distributed reverse proxies 
+    such as cloudflare to mitigate DDOS attacks.
+    if not ddos, determine the phase of attack:
+        if active recon:
+            counter active recon. 
+            immediately secure the position.
+        
+
+    immediately boot wireshark and begin capturing packets, make sure to save them for analysis.
+
+There is evidence your network is under attack from the outside?
+    depending on the severity of the situation, this is a job for the FBI. 
+    unauthorized breach of computer system falls under the computer misuse act of 1990
+    
+    otherwise, continue operation in max security environment, following opsec protocol,
+    and investigate the source and nature of the attacks, take necessary steps to secure sensitive data, and secure the vulnerable system. 
+
+A DOS attack is underway?
+    depends on the type of DOS attack. this could be due to a software bug being exploited. fix the bug.
+    monitor network traffic. 
+
+Anomalous activity is detected on the internal network?
+    change passwords. security audit. fire suspicious individuals. 
+    audit the system for malware.
+
+There is evidence an attacker has gained entry to the network?
+    change passwords, reboot network. if sensitive data is compromised you should contact relevant authorities
+
+An attack has ended?
+    assess damage. contact authorities. learn from mistakes, correct failures.
+    whois ip lookup, haveibeenpwned.
+    be sure the machines are not backdoored. 
+
+
+this is the job of a pen-tester, specific-oreiented-cyber-security pro, system administrators.
+as a developer, part of our job is to develop software free of security bugs. 
+
+
+tools/QRgen
+https://www.qr-code-generator.com/ # qr codes
+tools/colorWheel
+https://www.canva.com/colors/color-wheel/ #color wheel
+tools/regexGen
+https://regex-generator.olafneumann.org/?sampleText=2020-03-12T13%3A34%3A56.123Z%20INFO%20%20%5Borg.example.Class%5D%3A%20This%20is%20a%20%23simple%20%23logline%20containing%20a%20%27value%27.&flags=i&onlyPatterns=false&matchWholeLine=false&selection=23%7CCombination%20%5BMultiple%20characters%20%2B%20Character%5D
+https://github.com/noxone/regex-generator
+tools/languageDetection
+https://github.com/yoeo/guesslang
+
+https://dribbble.com/search/profile-login, adobe xd, overapi.com
+https://developer.mozilla.org/en-US/ mozilla developer network, documentation repository
+
+
+
+agile/ SDLC Software Development Lifecycle: analysis, design, implementation, testing, deployment.
+Keyword	Description
+SDLC	Software Development Lifecycle.
+Analysis	Identifying the needs of the system or feature.
+Design	Creating both the visual and architectural design of the system.
+Implementation	Development of the core functionality of the system.
+Testing	Verification and Quality Assurance of the system.
+Deployment	The process of deploying the system to its intended users.
+
+scrum/ https://wozu.exeterlms.com/student/83451/lesson/71795/topic/897918
+
+kanban/ https://wozu.exeterlms.com/student/83451/lesson/71796/topic/897948
+Kanban is another project, or process, management framework which aligns well with the principles of Agile Software Development.
+Keyword	Description
+Kanban	A project management method with an emphasis on continual delivery and reducing waste.
+Work-In-Progress (WIP)	The total of all work which is currently being done.
+Flow	The throughput of work through the project management workflow.
+Kanban Board	A visual representation of the Kanban project's current status.
+Kanban Cards	Details and supporting documentation for work being requested.
+https://trello.com/b/bYQcIPPd
+
+
+career skills/must dos
+https://andreasbm.github.io/web-skills/
+Build your own portfolio site
+Fill up your portfolio with projects
+Do freelance projects
+Put your code on GitHub
+Contribute to an open-source project
+Participate in a hackathon
+https://angelhack.com/
+https://www.hackathon.io/events
+https://mlh.io/
+https://devpost.com/
+
+Meet techies online and in real life
+Follow industry news
+Learn more
+Know and love your resume
+Check out the jobs
+Interview for a job, even if you're not sure you're ready
+
+
+career skills/elevator speech
+https://wozu.exeterlms.com/student/83451/lesson/71803/topic/897860
+when i was 19, i became deeply interested in engineering and coding. 
+since engineering felt practically out of reach for me, 
+but coding was an opportunity at my fingertips, I decided to start coding. 
+first i studied cybersecurity, social engineering, ethical hacking.
+this led me much deeper into the world of programming and software development, where I developed a cybersecurity 
+application named Digilock using the python language. I then attended WozU and branched
+my skills out much further, adding many full stack web development skills to my toolbelt.
+
+career skills/interviewing
+What are three things are you looking for in your next job?
+    1 transparency
+    2 pay
+    3 ethical standards
+
+What are 2 questions you will ask at the end of your interview?
+    What do you personally like most about working for this organisation?
+    How would you describe your organisation's culture?
+
+career skills/job search techniques
+
+
+Indeed
+Monster
+Glassdoor
+ZipRecruiter
+SimplyHired
+
+
+#EOF
+    </pre>
+</div>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>

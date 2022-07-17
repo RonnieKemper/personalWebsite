@@ -19,11 +19,21 @@ const toggleIcon = (e) => {
 
   $('.img3').on('mouseover', toggleIcon);
   $('.img3').on('mouseout', toggleIcon);
-  
+
+
+
+var repoloaded = 0
 function loadRepo() {
   const xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
+      repoloaded += 1
+      if (repoloaded >= 2) {
+      document.getElementById("githubRepos").innerHTML = ""; 
+      return
+      }
+      
+        
       results = JSON.parse(this.responseText);
       for (let i = 0; i < results.length; i++) {
         console.log(results[i].name);
@@ -35,7 +45,7 @@ function loadRepo() {
         a.appendChild(li);
         a.setAttribute("href", results[i].html_url);
         ul.appendChild(a);
-	document.getElementById("githubRepos").innerHTML = this.responseText;
+	      //document.getElementById("githubRepos").innerHTML = this.responseText
       }
     }
   };
